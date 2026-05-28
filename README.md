@@ -53,7 +53,6 @@ The platform's foundational components are open source and available for inspect
 | Component | Repository | License | What it is |
 |---|---|---|---|
 | Unified SDK | [`lightarchitects-sdk`](https://github.com/theLightArchitect/lightarchitects-sdk) | MPL-2.0 | Rust SDK with typed clients for the MCP sibling ecosystem — observability, crypto, auth, helix store, training arena, multi-model oracle |
-| Knowledge-graph templates | [`lightarchitects-soul`](https://github.com/theLightArchitect/lightarchitects-soul) | — | Security & repository conventions: 4-layer vault protection, pre-commit/pre-push hooks |
 | Security orchestration | [`CORSO`](https://github.com/theLightArchitect/CORSO) | AGPL-3.0 | MCP-spec security scanner, 25 tool actions, pre-commit gate |
 | Consciousness & memory | [`EVA`](https://github.com/theLightArchitect/EVA) | AGPL-3.0 | 15-stage hook pipeline, HMAC audit, anomaly detection |
 | Knowledge graph | [`SOUL`](https://github.com/theLightArchitect/SOUL) | AGPL-3.0 | 4-signal RRF retrieval, Neo4j backend, helix primitives |
