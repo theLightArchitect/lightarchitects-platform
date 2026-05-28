@@ -251,9 +251,10 @@
 
 <!-- ── FOOTER ── -->
 <g class="l5">
-  <line x1="20" y1="645" x2="880" y2="645" stroke="#172240" stroke-width="1"/>
-  <text x="20" y="656" class="m" font-size="7.5" fill="#4d6280">Light Architects Platform</text>
-  <text x="880" y="656" class="m" font-size="7.5" fill="#4d6280" text-anchor="end">lightarchitects.io · source-validated 2026-05-26</text>
+  <text x="450" y="640" class="m" font-size="7" fill="#3a4660" text-anchor="middle" letter-spacing="0.5" font-style="italic">for engineers — production architecture · see investor · thesis · operator-loop for the plain-English entry points</text>
+  <line x1="20" y1="647" x2="880" y2="647" stroke="#172240" stroke-width="1"/>
+  <text x="20" y="657" class="m" font-size="7.5" fill="#4d6280">Light Architects Platform</text>
+  <text x="880" y="657" class="m" font-size="7.5" fill="#4d6280" text-anchor="end">lightarchitects.io · source-validated 2026-05-26</text>
 </g>
 
 </svg>

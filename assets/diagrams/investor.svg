@@ -118,7 +118,7 @@
   <line x1="595" y1="39" x2="780" y2="39" stroke="#172240" stroke-width="1"/>
   <text x="450" y="82" class="s" font-size="44" font-weight="800" text-anchor="middle" letter-spacing="-1.2" fill="url(#hero-grad)">The Light Squad.</text>
   <text x="450" y="124" class="s" font-size="28" fill="#f0f6ff" font-weight="700" text-anchor="middle" letter-spacing="-0.5">Your AI Engineering Team.</text>
-  <text x="450" y="152" class="s" font-size="13" fill="#8a929d" text-anchor="middle">Your code never leaves your machine. 7 specialized agents. Quality gate after every wave.</text>
+  <text x="450" y="152" class="s" font-size="13" fill="#8a929d" text-anchor="middle">Your copilot between intent and coding agents — code stays local, 7 specialists, quality gate every wave.</text>
 </g>
 
 <!-- ── METRICS ROW (6 cards) — corrected with canonical sibling colors ── -->
@@ -150,8 +150,8 @@
   <!-- 96.2% Recall (kept — verified for SDK helix) -->
   <rect x="580" y="172" width="150" height="70" rx="5" fill="#070c1a" stroke="rgba(180,74,255,0.4)" stroke-width="1"/>
   <text x="655" y="202" class="s" font-size="26" fill="#B44AFF" font-weight="800" text-anchor="middle">96.2%</text>
-  <text x="655" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">RECALL@5</text>
-  <text x="655" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">LongMemEval · 23,854 steps</text>
+  <text x="655" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">MEMORY ACCURACY</text>
+  <text x="655" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle" font-style="italic">recall@5 · LongMemEval benchmark</text>
 
   <!-- Zero Telemetry -->
   <rect x="740" y="172" width="140" height="70" rx="5" fill="#070c1a" stroke="rgba(129,140,248,0.4)" stroke-width="1"/>
@@ -164,36 +164,42 @@
 
 <!-- ── THREE PILLARS — softened claims, canonical palette ── -->
 <g class="l3">
-  <!-- P1: Browser-to-Ship (softened "no terminal ever" → "browser-native PTY") -->
+  <!-- P1: E2E Engineering Surface (canonical Northstar P1) -->
   <rect x="20" y="268" width="273" height="100" rx="5" fill="#070c1a" stroke="rgba(69,183,209,0.35)" stroke-width="1"/>
   <rect x="20" y="268" width="273" height="4" rx="5" fill="#45B7D1" opacity="0.8"/>
-  <text x="36" y="294" class="m" font-size="8" fill="#45B7D1" letter-spacing="1.5">PILLAR 1</text>
+  <text x="36" y="294" class="m" font-size="7.5" fill="#45B7D1" letter-spacing="1.4">PILLAR 1 · E2E ENGINEERING SURFACE</text>
   <text x="36" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Browser-to-Ship Engineering</text>
-  <text x="36" y="334" class="m" font-size="8" fill="#5a6473">Complete full engineering sessions</text>
-  <text x="36" y="350" class="m" font-size="8" fill="#5a6473">from a web UI. Browser-native PTY.</text>
+  <text x="36" y="334" class="m" font-size="8" fill="#5a6473">Plan, build, ship, observe — all from a web UI.</text>
+  <text x="36" y="350" class="m" font-size="7.5" fill="#3a4660" font-style="italic">Webshell + PTY + permission cards + activity stream.</text>
 
-  <!-- P2: Autonomous Orchestration (unchanged, verified) -->
+  <!-- P2: Secure-by-Default Agent Orchestration (canonical Northstar P2) -->
   <rect x="313" y="268" width="274" height="100" rx="5" fill="#070c1a" stroke="rgba(255,20,147,0.35)" stroke-width="1"/>
   <rect x="313" y="268" width="274" height="4" rx="5" fill="#FF1493" opacity="0.8"/>
-  <text x="329" y="294" class="m" font-size="8" fill="#FF1493" letter-spacing="1.5">PILLAR 2</text>
-  <text x="329" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Autonomous Orchestration</text>
-  <text x="329" y="334" class="m" font-size="8" fill="#5a6473">Spawn · sandbox · monitor · steer</text>
-  <text x="329" y="350" class="m" font-size="8" fill="#5a6473">coding agents. Security by default.</text>
+  <text x="329" y="294" class="m" font-size="7.5" fill="#FF1493" letter-spacing="1.4">PILLAR 2 · SECURE-BY-DEFAULT ORCHESTRATION</text>
+  <text x="329" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Agents managed on your behalf</text>
+  <text x="329" y="334" class="m" font-size="8" fill="#5a6473">Spawn · sandbox · monitor · steer — zero-trust default.</text>
+  <text x="329" y="350" class="m" font-size="7.5" fill="#3a4660" font-style="italic">Container isolation · permission matrix · scope governor.</text>
 
-  <!-- P3: Multi-Model Verification (softened MoE claim → Oracle ensemble) -->
+  <!-- P3: Mixture-of-Experts Platform Architecture (canonical Northstar P3) -->
   <rect x="607" y="268" width="273" height="100" rx="5" fill="#070c1a" stroke="rgba(52,211,153,0.35)" stroke-width="1"/>
   <rect x="607" y="268" width="273" height="4" rx="5" fill="#34D399" opacity="0.8"/>
-  <text x="623" y="294" class="m" font-size="8" fill="#34D399" letter-spacing="1.5">PILLAR 3</text>
-  <text x="623" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Multi-Model Verification</text>
-  <text x="623" y="334" class="m" font-size="8" fill="#5a6473">Oracle ensemble (Lean 4 + 4 models)</text>
-  <text x="623" y="350" class="m" font-size="8" fill="#5a6473">in parallel consensus. MoE routing planned.</text>
+  <text x="623" y="294" class="m" font-size="7.5" fill="#34D399" letter-spacing="1.4">PILLAR 3 · MIXTURE-OF-EXPERTS ARCHITECTURE</text>
+  <text x="623" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Specialized agents, one binary</text>
+  <text x="623" y="334" class="m" font-size="8" fill="#5a6473">Sparse activation · function-call routing · math-verified.</text>
+  <text x="623" y="350" class="m" font-size="7.5" fill="#3a4660" font-style="italic">Oracle ensemble (Lean 4 + 4 models) parallel consensus.</text>
+</g>
+
+<!-- Caption: 3 of 7 pillars shown -->
+<g class="l3">
+  <text x="450" y="375" class="m" font-size="7" fill="#3a4660" text-anchor="middle" letter-spacing="0.8" font-style="italic">3 of 7 Northstar Pillars shown · P4 Async Parallel · P5 Persistent Memory · P6 Legible UI · P7 Production Reliability</text>
 </g>
 
 <line x1="20" y1="382" x2="880" y2="382" stroke="#172240" stroke-width="1" class="l3"/>
 
 <!-- ── DOMAIN AGENTS GRID — canonical sibling colors + corrected gates ── -->
 <g class="l4">
-  <text x="20" y="400" class="m" font-size="7.5" fill="#5a6473" letter-spacing="3">THE SQUAD — 7 DOMAIN AGENTS</text>
+  <text x="20" y="395" class="m" font-size="7.5" fill="#5a6473" letter-spacing="3">THE SQUAD — 7 DOMAIN AGENTS</text>
+  <text x="20" y="405" class="m" font-size="6.5" fill="#3a4660" letter-spacing="0.6" font-style="italic">gates: [A]rch · [S]ec · [Q]ual · [C]anon · [O]ps · [P]erf · [K]now · [D]ocs · [T]est · [R]esearch</text>
 
   <!-- Row 1: CORSO / EVA / SOUL / QUANTUM -->
   <!-- CORSO #00BFFF · gates [A][Q][T] (verified) · tool count corrected 26 → 25 -->
