@@ -3,6 +3,12 @@
 > **A Rust-native multi-agent AI platform that turns LLMs into reliable engineering operators** — with persistent memory, formal verification, and end-to-end observability across every tool call, build wave, and HTTP request.
 
 <p align="center">
+  <img src="assets/diagrams/investor.svg" alt="Light Architects — the AI engineering team you own" width="1100">
+</p>
+
+<p align="center"><sub><i>The team: 7 specialized agents · browser-to-ship engineering · multi-model verification · 100% self-hosted.</i></sub></p>
+
+<p align="center">
   <img src="assets/diagrams/thesis.svg" alt="Light Architects — the thesis" width="1100">
 </p>
 

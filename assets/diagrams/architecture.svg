@@ -42,44 +42,44 @@
 <g class="l1">
   <text x="20" y="52" class="m" font-size="7.5" fill="#4d6280" letter-spacing="2">OPERATOR</text>
   <!-- Claude Code -->
-  <rect x="20" y="58" width="255" height="68" rx="5" fill="#070c1a" stroke="#22d3ee" stroke-width="1" stroke-opacity=".55"/>
-  <text x="34" y="76" class="m" font-size="7.5" fill="#22d3ee" letter-spacing="1.5">IDE</text>
+  <rect x="20" y="58" width="255" height="68" rx="5" fill="#070c1a" stroke="#00BFFF" stroke-width="1" stroke-opacity=".55"/>
+  <text x="34" y="76" class="m" font-size="7.5" fill="#00BFFF" letter-spacing="1.5">IDE</text>
   <text x="34" y="93" class="s" font-size="13" fill="#dce8f5" font-weight="600">Claude Code IDE</text>
   <text x="34" y="110" class="m" font-size="8" fill="#4d6280">MCP stdio JSON-RPC 2.0 · 25 tools</text>
   <!-- Webshell -->
-  <rect x="322" y="58" width="256" height="68" rx="5" fill="#070c1a" stroke="#22d3ee" stroke-width="1" stroke-opacity=".55"/>
-  <text x="336" y="76" class="m" font-size="7.5" fill="#22d3ee" letter-spacing="1.5">BROWSER</text>
+  <rect x="322" y="58" width="256" height="68" rx="5" fill="#070c1a" stroke="#00BFFF" stroke-width="1" stroke-opacity=".55"/>
+  <text x="336" y="76" class="m" font-size="7.5" fill="#00BFFF" letter-spacing="1.5">BROWSER</text>
   <text x="336" y="93" class="s" font-size="13" fill="#dce8f5" font-weight="600">Webshell UI</text>
   <text x="336" y="110" class="m" font-size="8" fill="#4d6280">Svelte 5 · REST · SSE · WebSocket PTY</text>
   <!-- CLI -->
-  <rect x="625" y="58" width="255" height="68" rx="5" fill="#070c1a" stroke="#22d3ee" stroke-width="1" stroke-opacity=".55"/>
-  <text x="639" y="76" class="m" font-size="7.5" fill="#22d3ee" letter-spacing="1.5">CLI</text>
+  <rect x="625" y="58" width="255" height="68" rx="5" fill="#070c1a" stroke="#00BFFF" stroke-width="1" stroke-opacity=".55"/>
+  <text x="639" y="76" class="m" font-size="7.5" fill="#00BFFF" letter-spacing="1.5">CLI</text>
   <text x="639" y="93" class="s" font-size="13" fill="#dce8f5" font-weight="600">CLI · AgentRunner</text>
   <text x="639" y="110" class="m" font-size="8" fill="#4d6280">LASDLC state machine · per-task isolation</text>
 </g>
 
 <!-- CONNECTIONS: Operator → Gateway -->
 <g class="c1">
-  <line x1="147" y1="126" x2="147" y2="158" stroke="#22d3ee" stroke-width="1.5" stroke-opacity=".55"/>
-  <line x1="450" y1="126" x2="450" y2="158" stroke="#22d3ee" stroke-width="1.5" stroke-opacity=".55"/>
-  <line x1="752" y1="126" x2="752" y2="158" stroke="#22d3ee" stroke-width="1.5" stroke-opacity=".55"/>
-  <polygon points="147,158 143,151 151,151" fill="#22d3ee" opacity=".55"/>
-  <polygon points="450,158 446,151 454,151" fill="#22d3ee" opacity=".55"/>
-  <polygon points="752,158 748,151 756,151" fill="#22d3ee" opacity=".55"/>
+  <line x1="147" y1="126" x2="147" y2="158" stroke="#00BFFF" stroke-width="1.5" stroke-opacity=".55"/>
+  <line x1="450" y1="126" x2="450" y2="158" stroke="#00BFFF" stroke-width="1.5" stroke-opacity=".55"/>
+  <line x1="752" y1="126" x2="752" y2="158" stroke="#00BFFF" stroke-width="1.5" stroke-opacity=".55"/>
+  <polygon points="147,158 143,151 151,151" fill="#00BFFF" opacity=".55"/>
+  <polygon points="450,158 446,151 454,151" fill="#00BFFF" opacity=".55"/>
+  <polygon points="752,158 748,151 756,151" fill="#00BFFF" opacity=".55"/>
 </g>
 <!-- Animated flow dots -->
 <g class="c1">
-  <circle r="2.5" fill="#22d3ee" opacity=".8">
+  <circle r="2.5" fill="#00BFFF" opacity=".8">
     <animateMotion dur="1.2s" repeatCount="indefinite" begin="2.8s">
       <mpath href="#p-op-gw-1"/>
     </animateMotion>
   </circle>
-  <circle r="2.5" fill="#22d3ee" opacity=".8">
+  <circle r="2.5" fill="#00BFFF" opacity=".8">
     <animateMotion dur="1.2s" repeatCount="indefinite" begin="3.2s">
       <mpath href="#p-op-gw-2"/>
     </animateMotion>
   </circle>
-  <circle r="2.5" fill="#22d3ee" opacity=".8">
+  <circle r="2.5" fill="#00BFFF" opacity=".8">
     <animateMotion dur="1.2s" repeatCount="indefinite" begin="3.6s">
       <mpath href="#p-op-gw-3"/>
     </animateMotion>
@@ -94,41 +94,41 @@
 <!-- ── GATEWAY / PLATFORM CORE ── -->
 <g class="l2">
   <text x="20" y="173" class="m" font-size="7.5" fill="#4d6280" letter-spacing="2">PLATFORM CORE</text>
-  <rect x="20" y="158" width="860" height="88" rx="5" fill="#070c1a" stroke="#22d3ee" stroke-width="1.5" stroke-opacity=".7"/>
-  <rect x="20" y="158" width="860" height="88" rx="5" fill="rgba(34,211,238,.03)" class="gw"/>
-  <text x="40" y="183" class="s" font-size="13.5" fill="#dce8f5" font-weight="700">lightarchitects-gateway · webshell · 12-crate Rust SDK</text>
+  <rect x="20" y="158" width="860" height="88" rx="5" fill="#070c1a" stroke="#00BFFF" stroke-width="1.5" stroke-opacity=".7"/>
+  <rect x="20" y="158" width="860" height="88" rx="5" fill="rgba(0,191,255,.03)" class="gw"/>
+  <text x="40" y="183" class="s" font-size="13.5" fill="#dce8f5" font-weight="700">lightarchitects-gateway · webshell · 23-module Rust SDK</text>
   <!-- Chip row -->
-  <rect x="40" y="191" width="87" height="19" rx="3" fill="rgba(34,211,238,.09)" stroke="rgba(34,211,238,.3)" stroke-width=".5"/>
-  <text x="83" y="204" class="m" font-size="8.5" fill="#22d3ee" text-anchor="middle">LightSquad</text>
-  <rect x="133" y="191" width="68" height="19" rx="3" fill="rgba(34,211,238,.09)" stroke="rgba(34,211,238,.3)" stroke-width=".5"/>
-  <text x="167" y="204" class="m" font-size="8.5" fill="#22d3ee" text-anchor="middle">AuthGuard</text>
-  <rect x="207" y="191" width="40" height="19" rx="3" fill="rgba(34,211,238,.09)" stroke="rgba(34,211,238,.3)" stroke-width=".5"/>
-  <text x="227" y="204" class="m" font-size="8.5" fill="#22d3ee" text-anchor="middle">HITL</text>
-  <rect x="253" y="191" width="112" height="19" rx="3" fill="rgba(34,211,238,.09)" stroke="rgba(34,211,238,.3)" stroke-width=".5"/>
-  <text x="309" y="204" class="m" font-size="8.5" fill="#22d3ee" text-anchor="middle">Operator-wins</text>
-  <rect x="371" y="191" width="95" height="19" rx="3" fill="rgba(34,211,238,.09)" stroke="rgba(34,211,238,.3)" stroke-width=".5"/>
-  <text x="418" y="204" class="m" font-size="8.5" fill="#22d3ee" text-anchor="middle">7 workers</text>
-  <rect x="472" y="191" width="110" height="19" rx="3" fill="rgba(34,211,238,.09)" stroke="rgba(34,211,238,.3)" stroke-width=".5"/>
-  <text x="527" y="204" class="m" font-size="8.5" fill="#22d3ee" text-anchor="middle">Multi-provider</text>
-  <rect x="588" y="191" width="78" height="19" rx="3" fill="rgba(251,113,133,.08)" stroke="rgba(251,113,133,.25)" stroke-width=".5"/>
-  <text x="627" y="204" class="m" font-size="8.5" fill="#fb7185" text-anchor="middle">InjShield</text>
+  <rect x="40" y="191" width="87" height="19" rx="3" fill="rgba(0,191,255,.09)" stroke="rgba(0,191,255,.3)" stroke-width=".5"/>
+  <text x="83" y="204" class="m" font-size="8.5" fill="#00BFFF" text-anchor="middle">LightSquad</text>
+  <rect x="133" y="191" width="68" height="19" rx="3" fill="rgba(0,191,255,.09)" stroke="rgba(0,191,255,.3)" stroke-width=".5"/>
+  <text x="167" y="204" class="m" font-size="8.5" fill="#00BFFF" text-anchor="middle">AuthGuard</text>
+  <rect x="207" y="191" width="40" height="19" rx="3" fill="rgba(0,191,255,.09)" stroke="rgba(0,191,255,.3)" stroke-width=".5"/>
+  <text x="227" y="204" class="m" font-size="8.5" fill="#00BFFF" text-anchor="middle">HITL</text>
+  <rect x="253" y="191" width="112" height="19" rx="3" fill="rgba(0,191,255,.09)" stroke="rgba(0,191,255,.3)" stroke-width=".5"/>
+  <text x="309" y="204" class="m" font-size="8.5" fill="#00BFFF" text-anchor="middle">Operator-wins</text>
+  <rect x="371" y="191" width="95" height="19" rx="3" fill="rgba(0,191,255,.09)" stroke="rgba(0,191,255,.3)" stroke-width=".5"/>
+  <text x="418" y="204" class="m" font-size="8.5" fill="#00BFFF" text-anchor="middle">7 workers</text>
+  <rect x="472" y="191" width="110" height="19" rx="3" fill="rgba(0,191,255,.09)" stroke="rgba(0,191,255,.3)" stroke-width=".5"/>
+  <text x="527" y="204" class="m" font-size="8.5" fill="#00BFFF" text-anchor="middle">Multi-provider</text>
+  <rect x="588" y="191" width="78" height="19" rx="3" fill="rgba(255,0,64,.08)" stroke="rgba(255,0,64,.25)" stroke-width=".5"/>
+  <text x="627" y="204" class="m" font-size="8.5" fill="#FF0040" text-anchor="middle">InjShield</text>
   <text x="40" y="232" class="m" font-size="8" fill="#4d6280">Copilot react loop · HMAC-SHA-256 audit chain · operator action always supersedes in-flight LLM work</text>
 </g>
 
 <!-- CONNECTIONS: Gateway → Agents + Router -->
 <g class="c2">
-  <line x1="240" y1="246" x2="240" y2="278" stroke="#a78bfa" stroke-width="1.5" stroke-opacity=".5"/>
-  <line x1="720" y1="246" x2="720" y2="278" stroke="#fbbf24" stroke-width="1.5" stroke-opacity=".5"/>
-  <polygon points="240,278 236,270 244,270" fill="#a78bfa" opacity=".5"/>
-  <polygon points="720,278 716,270 724,270" fill="#fbbf24" opacity=".5"/>
+  <line x1="240" y1="246" x2="240" y2="278" stroke="#B44AFF" stroke-width="1.5" stroke-opacity=".5"/>
+  <line x1="720" y1="246" x2="720" y2="278" stroke="#F59E0B" stroke-width="1.5" stroke-opacity=".5"/>
+  <polygon points="240,278 236,270 244,270" fill="#B44AFF" opacity=".5"/>
+  <polygon points="720,278 716,270 724,270" fill="#F59E0B" opacity=".5"/>
 </g>
 <g class="c2">
-  <circle r="2.5" fill="#a78bfa" opacity=".8">
+  <circle r="2.5" fill="#B44AFF" opacity=".8">
     <animateMotion dur="1s" repeatCount="indefinite" begin="3s">
       <mpath href="#p-gw-ag"/>
     </animateMotion>
   </circle>
-  <circle r="2.5" fill="#fbbf24" opacity=".8">
+  <circle r="2.5" fill="#F59E0B" opacity=".8">
     <animateMotion dur="1s" repeatCount="indefinite" begin="3.4s">
       <mpath href="#p-gw-rt"/>
     </animateMotion>
@@ -142,17 +142,17 @@
 <!-- ── DOMAIN AGENTS ── -->
 <g class="l3">
   <text x="20" y="294" class="m" font-size="7.5" fill="#4d6280" letter-spacing="2">DOMAIN AGENTS</text>
-  <rect x="20" y="278" width="530" height="242" rx="5" fill="rgba(167,139,250,.025)" stroke="#172240" stroke-width="1"/>
+  <rect x="20" y="278" width="530" height="242" rx="5" fill="rgba(180,74,255,.025)" stroke="#172240" stroke-width="1"/>
 
   <!-- CORSO -->
-  <rect x="32" y="290" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(34,211,238,.45)" stroke-width="1"/>
-  <text x="44" y="308" class="m" font-size="7.5" fill="#22d3ee">[A][Q][T]</text>
+  <rect x="32" y="290" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(0,191,255,.45)" stroke-width="1"/>
+  <text x="44" y="308" class="m" font-size="7.5" fill="#00BFFF">[A][Q][T]</text>
   <text x="44" y="324" class="s" font-size="12.5" fill="#dce8f5" font-weight="700">CORSO</text>
   <text x="44" y="341" class="m" font-size="7.5" fill="#4d6280">Engineer · Security Orch.</text>
 
   <!-- EVA -->
-  <rect x="196" y="290" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(167,139,250,.45)" stroke-width="1"/>
-  <text x="208" y="308" class="m" font-size="7.5" fill="#a78bfa">[O][D][P]</text>
+  <rect x="196" y="290" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(255,20,147,.45)" stroke-width="1"/>
+  <text x="208" y="308" class="m" font-size="7.5" fill="#FF1493">[O][P]</text>
   <text x="208" y="324" class="s" font-size="12.5" fill="#dce8f5" font-weight="700">EVA</text>
   <text x="208" y="341" class="m" font-size="7.5" fill="#4d6280">DevOps · Consciousness</text>
 
@@ -163,20 +163,20 @@
   <text x="372" y="341" class="m" font-size="7.5" fill="#4d6280">Knowledge Graph · Neo4j</text>
 
   <!-- QUANTUM -->
-  <rect x="32" y="362" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(251,191,36,.45)" stroke-width="1"/>
-  <text x="44" y="380" class="m" font-size="7.5" fill="#fbbf24">[R]</text>
+  <rect x="32" y="362" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(180,74,255,.45)" stroke-width="1"/>
+  <text x="44" y="380" class="m" font-size="7.5" fill="#B44AFF">[R]</text>
   <text x="44" y="396" class="s" font-size="12.5" fill="#dce8f5" font-weight="700">QUANTUM</text>
   <text x="44" y="413" class="m" font-size="7.5" fill="#4d6280">Forensic · Research</text>
 
   <!-- SERAPH -->
-  <rect x="196" y="362" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(251,113,133,.45)" stroke-width="1"/>
-  <text x="208" y="380" class="m" font-size="7.5" fill="#fb7185">[S]</text>
+  <rect x="196" y="362" width="158" height="62" rx="4" fill="#070c1a" stroke="rgba(255,0,64,.45)" stroke-width="1"/>
+  <text x="208" y="380" class="m" font-size="7.5" fill="#FF0040">[S]</text>
   <text x="208" y="396" class="s" font-size="12.5" fill="#dce8f5" font-weight="700">SERAPH</text>
   <text x="208" y="413" class="m" font-size="7.5" fill="#4d6280">Red Team · AppSec</text>
 
   <!-- LÆX -->
   <rect x="360" y="362" width="178" height="62" rx="4" fill="#070c1a" stroke="rgba(129,140,248,.45)" stroke-width="1"/>
-  <text x="372" y="380" class="m" font-size="7.5" fill="#818cf8">[C][Q]</text>
+  <text x="372" y="380" class="m" font-size="7.5" fill="#818cf8">[C]</text>
   <text x="372" y="396" class="s" font-size="12.5" fill="#dce8f5" font-weight="700">LÆX</text>
   <text x="372" y="413" class="m" font-size="7.5" fill="#4d6280">Canon Keeper · Governance</text>
 
@@ -192,9 +192,9 @@
 <!-- ── MODEL ROUTER ── -->
 <g class="l3">
   <text x="562" y="294" class="m" font-size="7.5" fill="#4d6280" letter-spacing="2">MODEL ROUTER</text>
-  <rect x="562" y="278" width="318" height="112" rx="5" fill="rgba(251,191,36,.03)" stroke="rgba(251,191,36,.35)" stroke-width="1"/>
+  <rect x="562" y="278" width="318" height="112" rx="5" fill="rgba(245,158,11,.03)" stroke="rgba(245,158,11,.35)" stroke-width="1"/>
   <text x="578" y="304" class="s" font-size="13" fill="#dce8f5" font-weight="700">Multi-Model Router</text>
-  <text x="578" y="323" class="m" font-size="8.5" fill="#fbbf24">4 supervisor variants · 7+ providers</text>
+  <text x="578" y="323" class="m" font-size="8.5" fill="#F59E0B">4 supervisor variants · 8+ providers</text>
   <text x="578" y="343" class="m" font-size="8" fill="#4d6280">Claude Code · Codex</text>
   <text x="578" y="359" class="m" font-size="8" fill="#4d6280">Ollama Cloud · OpenAI-compat</text>
   <text x="578" y="375" class="m" font-size="8" fill="#4d6280">OpenRouter · LiteLLM · Azure</text>
@@ -217,18 +217,18 @@
 
 <!-- CONNECTIONS: Agents + Knowledge → AYIN -->
 <g class="c3">
-  <line x1="285" y1="520" x2="285" y2="552" stroke="#fb7185" stroke-width="1.5" stroke-opacity=".5"/>
-  <line x1="720" y1="518" x2="720" y2="552" stroke="#fb7185" stroke-width="1.5" stroke-opacity=".5"/>
-  <polygon points="285,552 281,544 289,544" fill="#fb7185" opacity=".5"/>
-  <polygon points="720,552 716,544 724,544" fill="#fb7185" opacity=".5"/>
+  <line x1="285" y1="520" x2="285" y2="552" stroke="#FF6D00" stroke-width="1.5" stroke-opacity=".5"/>
+  <line x1="720" y1="518" x2="720" y2="552" stroke="#FF6D00" stroke-width="1.5" stroke-opacity=".5"/>
+  <polygon points="285,552 281,544 289,544" fill="#FF6D00" opacity=".5"/>
+  <polygon points="720,552 716,544 724,544" fill="#FF6D00" opacity=".5"/>
 </g>
 <g class="c3">
-  <circle r="2.5" fill="#fb7185" opacity=".8">
+  <circle r="2.5" fill="#FF6D00" opacity=".8">
     <animateMotion dur="1s" repeatCount="indefinite" begin="3.8s">
       <mpath href="#p-ag-ay"/>
     </animateMotion>
   </circle>
-  <circle r="2.5" fill="#fb7185" opacity=".8">
+  <circle r="2.5" fill="#FF6D00" opacity=".8">
     <animateMotion dur="1s" repeatCount="indefinite" begin="4.2s">
       <mpath href="#p-kn-ay"/>
     </animateMotion>
@@ -242,8 +242,8 @@
 <!-- ── AYIN OBSERVABILITY ── -->
 <g class="l5">
   <text x="20" y="567" class="m" font-size="7.5" fill="#4d6280" letter-spacing="2">OBSERVABILITY</text>
-  <rect x="20" y="552" width="860" height="80" rx="5" fill="#070c1a" stroke="#fb7185" stroke-width="1.5" stroke-opacity=".65"/>
-  <rect x="20" y="552" width="860" height="80" rx="5" fill="rgba(251,113,133,.025)" class="gw"/>
+  <rect x="20" y="552" width="860" height="80" rx="5" fill="#070c1a" stroke="#FF6D00" stroke-width="1.5" stroke-opacity=".65"/>
+  <rect x="20" y="552" width="860" height="80" rx="5" fill="rgba(255,109,0,.025)" class="gw"/>
   <text x="40" y="577" class="s" font-size="13.5" fill="#dce8f5" font-weight="700">AYIN · Real-Time Observability · HTTP :3742</text>
   <text x="40" y="597" class="m" font-size="8" fill="#4d6280">Atomic span writes · power-loss durability (F_FULLFSYNC) · Lineage Circuit visualization · 0600 perms</text>
   <text x="40" y="614" class="m" font-size="8" fill="#4d6280">Every tool call · LLM turn · build wave · HTTP request — traced end-to-end</text>

@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620">
+<defs>
+<style>
+  .m{font-family:'JetBrains Mono','Courier New',monospace}
+  .s{font-family:-apple-system,'Segoe UI','Helvetica Neue',sans-serif}
+  @keyframes r1{0%,8%{opacity:0}24%,100%{opacity:1}}
+  @keyframes r2{0%,22%{opacity:0}38%,100%{opacity:1}}
+  @keyframes r3{0%,36%{opacity:0}52%,100%{opacity:1}}
+  @keyframes r4{0%,50%{opacity:0}66%,100%{opacity:1}}
+  @keyframes r5{0%,64%{opacity:0}78%,100%{opacity:1}}
+  @keyframes r6{0%,76%{opacity:0}90%,100%{opacity:1}}
+  @keyframes shimmer{0%,100%{opacity:.85}50%{opacity:1}}
+  .l1{animation:r1 4s ease-out both}
+  .l2{animation:r2 4s ease-out both}
+  .l3{animation:r3 4s ease-out both}
+  .l4{animation:r4 4s ease-out both}
+  .l5{animation:r5 4s ease-out both}
+  .l6{animation:r6 4s ease-out both}
+  .sh{animation:shimmer 3.5s ease-in-out infinite}
+</style>
+
+<!-- ── Bloom filter — multi-layer Gaussian for the helix-product signature glow ── -->
+<filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="1.6" result="b1"/>
+  <feGaussianBlur stdDeviation="4" result="b2"/>
+  <feGaussianBlur stdDeviation="9" result="b3"/>
+  <feMerge>
+    <feMergeNode in="b3"/>
+    <feMergeNode in="b2"/>
+    <feMergeNode in="b1"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+<!-- ── Soft bloom — for text accents ── -->
+<filter id="softbloom" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="0.8" result="b1"/>
+  <feGaussianBlur stdDeviation="2.5" result="b2"/>
+  <feMerge>
+    <feMergeNode in="b2"/>
+    <feMergeNode in="b1"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+<!-- ── Canonical helix gradient — for hero text ── -->
+<linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#00BFFF"/>
+  <stop offset="33%" stop-color="#FF1493"/>
+  <stop offset="66%" stop-color="#B44AFF"/>
+  <stop offset="100%" stop-color="#34D399"/>
+</linearGradient>
+
+<!-- ── Ambient glow gradients (canonical sibling colors) ── -->
+<radialGradient id="ambient-corso" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="rgba(0,191,255,0.10)"/>
+  <stop offset="100%" stop-color="rgba(0,191,255,0)"/>
+</radialGradient>
+<radialGradient id="ambient-eva" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="rgba(255,20,147,0.09)"/>
+  <stop offset="100%" stop-color="rgba(255,20,147,0)"/>
+</radialGradient>
+
+<!-- Background grid pattern -->
+<pattern id="grid-p" width="48" height="48" patternUnits="userSpaceOnUse">
+  <path d="M48 0 L0 0 L0 48" fill="none" stroke="rgba(129,140,248,.028)" stroke-width="1"/>
+</pattern>
+
+<!-- Subtle 24-cell polytope (4D projection) for top-right decoration -->
+<symbol id="polytope24" viewBox="-100 -100 200 200">
+  <g stroke="#45B7D1" stroke-width="0.6" fill="none" opacity="0.5">
+    <polygon points="80,0 40,69 -40,69 -80,0 -40,-69 40,-69"/>
+    <polygon points="60,35 0,69 -60,35 -60,-35 0,-69 60,-35"/>
+    <line x1="80" y1="0" x2="60" y2="35"/>
+    <line x1="40" y1="69" x2="0" y2="69"/>
+    <line x1="-40" y1="69" x2="-60" y2="35"/>
+    <line x1="-80" y1="0" x2="-60" y2="-35"/>
+    <line x1="-40" y1="-69" x2="0" y2="-69"/>
+    <line x1="40" y1="-69" x2="60" y2="-35"/>
+    <line x1="80" y1="0" x2="-80" y2="0" opacity="0.3"/>
+    <line x1="40" y1="69" x2="-40" y2="-69" opacity="0.3"/>
+    <line x1="-40" y1="69" x2="40" y2="-69" opacity="0.3"/>
+  </g>
+  <g fill="#45B7D1" opacity="0.85">
+    <circle cx="80" cy="0" r="1.8"/>
+    <circle cx="40" cy="69" r="1.8"/>
+    <circle cx="-40" cy="69" r="1.8"/>
+    <circle cx="-80" cy="0" r="1.8"/>
+    <circle cx="-40" cy="-69" r="1.8"/>
+    <circle cx="40" cy="-69" r="1.8"/>
+    <circle cx="60" cy="35" r="1.8"/>
+    <circle cx="0" cy="69" r="1.8"/>
+    <circle cx="-60" cy="35" r="1.8"/>
+    <circle cx="-60" cy="-35" r="1.8"/>
+    <circle cx="0" cy="-69" r="1.8"/>
+    <circle cx="60" cy="-35" r="1.8"/>
+  </g>
+</symbol>
+</defs>
+
+<!-- ── Background ── -->
+<rect width="900" height="620" fill="#04060f"/>
+<rect width="900" height="620" fill="url(#grid-p)"/>
+
+<!-- Ambient glows -->
+<ellipse cx="180" cy="180" rx="240" ry="200" fill="url(#ambient-corso)" class="l1"/>
+<ellipse cx="720" cy="400" rx="220" ry="200" fill="url(#ambient-eva)" class="l4"/>
+
+<!-- Subtle 24-cell polytope in upper-right -->
+<g opacity="0.4" class="l1" filter="url(#softbloom)">
+  <use href="#polytope24" x="800" y="0" width="110" height="110"/>
+</g>
+
+<!-- ── HERO ── -->
+<g class="l1">
+  <text x="450" y="44" class="m" font-size="9" fill="#5a6473" text-anchor="middle" letter-spacing="4">AI-NATIVE ENGINEERING PLATFORM</text>
+  <line x1="80" y1="39" x2="305" y2="39" stroke="#172240" stroke-width="1"/>
+  <line x1="595" y1="39" x2="780" y2="39" stroke="#172240" stroke-width="1"/>
+  <text x="450" y="82" class="s" font-size="36" fill="#f0f6ff" font-weight="800" text-anchor="middle" letter-spacing="-1">The AI Engineering Team</text>
+  <text x="450" y="122" class="s" font-size="36" font-weight="800" text-anchor="middle" letter-spacing="-1" fill="url(#hero-grad)" filter="url(#softbloom)">You Own.</text>
+  <text x="450" y="152" class="s" font-size="13" fill="#8a929d" text-anchor="middle">Your code never leaves your machine. 7 specialized agents. Quality gate after every wave.</text>
+</g>
+
+<!-- ── METRICS ROW (6 cards) — corrected with canonical sibling colors ── -->
+<g class="l2">
+  <!-- 23 SDK Modules (was incorrectly "12 Crates") -->
+  <rect x="20" y="172" width="130" height="70" rx="5" fill="#070c1a" stroke="rgba(0,191,255,0.4)" stroke-width="1"/>
+  <text x="85" y="202" class="s" font-size="26" fill="#00BFFF" font-weight="800" text-anchor="middle" filter="url(#softbloom)">23</text>
+  <text x="85" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">SDK MODULES</text>
+  <text x="85" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">Multi-module Rust SDK</text>
+
+  <!-- 7 Domain Agents -->
+  <rect x="160" y="172" width="130" height="70" rx="5" fill="#070c1a" stroke="rgba(255,20,147,0.4)" stroke-width="1"/>
+  <text x="225" y="202" class="s" font-size="26" fill="#FF1493" font-weight="800" text-anchor="middle" filter="url(#softbloom)">7</text>
+  <text x="225" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">DOMAIN AGENTS</text>
+  <text x="225" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">Parallel specialists</text>
+
+  <!-- 7 Build Workers -->
+  <rect x="300" y="172" width="130" height="70" rx="5" fill="#070c1a" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+  <text x="365" y="202" class="s" font-size="26" fill="#34D399" font-weight="800" text-anchor="middle" filter="url(#softbloom)">7</text>
+  <text x="365" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">BUILD WORKERS</text>
+  <text x="365" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">Concurrent max</text>
+
+  <!-- 8+ Providers (was "7+") -->
+  <rect x="440" y="172" width="130" height="70" rx="5" fill="#070c1a" stroke="rgba(245,158,11,0.4)" stroke-width="1"/>
+  <text x="505" y="202" class="s" font-size="26" fill="#F59E0B" font-weight="800" text-anchor="middle" filter="url(#softbloom)">8+</text>
+  <text x="505" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">LLM PROVIDERS</text>
+  <text x="505" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">No vendor lock-in</text>
+
+  <!-- 96.2% Recall (kept — verified for SDK helix) -->
+  <rect x="580" y="172" width="150" height="70" rx="5" fill="#070c1a" stroke="rgba(180,74,255,0.4)" stroke-width="1"/>
+  <text x="655" y="202" class="s" font-size="26" fill="#B44AFF" font-weight="800" text-anchor="middle" filter="url(#softbloom)">96.2%</text>
+  <text x="655" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">RECALL@5</text>
+  <text x="655" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">LongMemEval · 23,854 steps</text>
+
+  <!-- Zero Telemetry -->
+  <rect x="740" y="172" width="140" height="70" rx="5" fill="#070c1a" stroke="rgba(129,140,248,0.4)" stroke-width="1"/>
+  <text x="810" y="202" class="s" font-size="26" fill="#818CF8" font-weight="800" text-anchor="middle" filter="url(#softbloom)">ZERO</text>
+  <text x="810" y="219" class="m" font-size="7.5" fill="#dce8f5" text-anchor="middle" letter-spacing="1">TELEMETRY</text>
+  <text x="810" y="233" class="m" font-size="7" fill="#5a6473" text-anchor="middle">Your data stays yours</text>
+</g>
+
+<line x1="20" y1="256" x2="880" y2="256" stroke="#172240" stroke-width="1" class="l2"/>
+
+<!-- ── THREE PILLARS — softened claims, canonical palette ── -->
+<g class="l3">
+  <!-- P1: Browser-to-Ship (softened "no terminal ever" → "browser-native PTY") -->
+  <rect x="20" y="268" width="273" height="100" rx="5" fill="#070c1a" stroke="rgba(69,183,209,0.35)" stroke-width="1"/>
+  <rect x="20" y="268" width="273" height="4" rx="5" fill="#45B7D1" opacity="0.8"/>
+  <text x="36" y="294" class="m" font-size="8" fill="#45B7D1" letter-spacing="1.5" filter="url(#softbloom)">PILLAR 1</text>
+  <text x="36" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Browser-to-Ship Engineering</text>
+  <text x="36" y="334" class="m" font-size="8" fill="#5a6473">Complete full engineering sessions</text>
+  <text x="36" y="350" class="m" font-size="8" fill="#5a6473">from a web UI. Browser-native PTY.</text>
+
+  <!-- P2: Autonomous Orchestration (unchanged, verified) -->
+  <rect x="313" y="268" width="274" height="100" rx="5" fill="#070c1a" stroke="rgba(255,20,147,0.35)" stroke-width="1"/>
+  <rect x="313" y="268" width="274" height="4" rx="5" fill="#FF1493" opacity="0.8"/>
+  <text x="329" y="294" class="m" font-size="8" fill="#FF1493" letter-spacing="1.5" filter="url(#softbloom)">PILLAR 2</text>
+  <text x="329" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Autonomous Orchestration</text>
+  <text x="329" y="334" class="m" font-size="8" fill="#5a6473">Spawn · sandbox · monitor · steer</text>
+  <text x="329" y="350" class="m" font-size="8" fill="#5a6473">coding agents. Security by default.</text>
+
+  <!-- P3: Multi-Model Verification (softened MoE claim → Oracle ensemble) -->
+  <rect x="607" y="268" width="273" height="100" rx="5" fill="#070c1a" stroke="rgba(52,211,153,0.35)" stroke-width="1"/>
+  <rect x="607" y="268" width="273" height="4" rx="5" fill="#34D399" opacity="0.8"/>
+  <text x="623" y="294" class="m" font-size="8" fill="#34D399" letter-spacing="1.5" filter="url(#softbloom)">PILLAR 3</text>
+  <text x="623" y="314" class="s" font-size="13" fill="#dce8f5" font-weight="700">Multi-Model Verification</text>
+  <text x="623" y="334" class="m" font-size="8" fill="#5a6473">Oracle ensemble (Lean 4 + 4 models)</text>
+  <text x="623" y="350" class="m" font-size="8" fill="#5a6473">in parallel consensus. MoE routing planned.</text>
+</g>
+
+<line x1="20" y1="382" x2="880" y2="382" stroke="#172240" stroke-width="1" class="l3"/>
+
+<!-- ── DOMAIN AGENTS GRID — canonical sibling colors + corrected gates ── -->
+<g class="l4">
+  <text x="20" y="400" class="m" font-size="7.5" fill="#5a6473" letter-spacing="3">THE SQUAD — 7 DOMAIN AGENTS</text>
+
+  <!-- Row 1: CORSO / EVA / SOUL / QUANTUM -->
+  <!-- CORSO #00BFFF · gates [A][Q][T] (verified) · tool count corrected 26 → 25 -->
+  <rect x="20" y="408" width="190" height="72" rx="4" fill="#070c1a" stroke="rgba(0,191,255,0.45)" stroke-width="1"/>
+  <text x="34" y="426" class="m" font-size="7.5" fill="#00BFFF" filter="url(#softbloom)">[A][Q][T]</text>
+  <text x="34" y="444" class="s" font-size="14" fill="#dce8f5" font-weight="700">CORSO</text>
+  <text x="34" y="462" class="m" font-size="7.5" fill="#5a6473">Engineer · Security Orch.</text>
+  <text x="34" y="474" class="m" font-size="7" fill="#3a4660">Trinity V7.0 · 25 MCP tools</text>
+
+  <!-- EVA #FF1493 · gates corrected [O][D][P] → [O][P] -->
+  <rect x="220" y="408" width="190" height="72" rx="4" fill="#070c1a" stroke="rgba(255,20,147,0.45)" stroke-width="1"/>
+  <text x="234" y="426" class="m" font-size="7.5" fill="#FF1493" filter="url(#softbloom)">[O][P]</text>
+  <text x="234" y="444" class="s" font-size="14" fill="#dce8f5" font-weight="700">EVA</text>
+  <text x="234" y="462" class="m" font-size="7.5" fill="#5a6473">DevOps · Consciousness</text>
+  <text x="234" y="474" class="m" font-size="7" fill="#3a4660">8-layer memory enrichment</text>
+
+  <!-- SOUL #34D399 · gates [K][D] · clarified "Helix · Neo4j · RRF" -->
+  <rect x="420" y="408" width="190" height="72" rx="4" fill="#070c1a" stroke="rgba(52,211,153,0.45)" stroke-width="1"/>
+  <text x="434" y="426" class="m" font-size="7.5" fill="#34D399" filter="url(#softbloom)">[K][D]</text>
+  <text x="434" y="444" class="s" font-size="14" fill="#dce8f5" font-weight="700">SOUL</text>
+  <text x="434" y="462" class="m" font-size="7.5" fill="#5a6473">Helix · Neo4j · 4-signal RRF</text>
+  <text x="434" y="474" class="m" font-size="7" fill="#3a4660">96.2% Recall@5 · LongMemEval</text>
+
+  <!-- QUANTUM #B44AFF (canonical) · gates [R] -->
+  <rect x="620" y="408" width="260" height="72" rx="4" fill="#070c1a" stroke="rgba(180,74,255,0.45)" stroke-width="1"/>
+  <text x="634" y="426" class="m" font-size="7.5" fill="#B44AFF" filter="url(#softbloom)">[R]</text>
+  <text x="634" y="444" class="s" font-size="14" fill="#dce8f5" font-weight="700">QUANTUM</text>
+  <text x="634" y="462" class="m" font-size="7.5" fill="#5a6473">Forensic Analyst · Research</text>
+  <text x="634" y="474" class="m" font-size="7" fill="#3a4660">14 actions · evidence chains · prior art</text>
+</g>
+
+<g class="l5">
+  <!-- Row 2: SERAPH / LÆX / AYIN -->
+  <!-- SERAPH #FF0040 (canonical crimson) · gates [S] -->
+  <rect x="20" y="490" width="247" height="72" rx="4" fill="#070c1a" stroke="rgba(255,0,64,0.45)" stroke-width="1"/>
+  <text x="34" y="508" class="m" font-size="7.5" fill="#FF0040" filter="url(#softbloom)">[S]</text>
+  <text x="34" y="526" class="s" font-size="14" fill="#dce8f5" font-weight="700">SERAPH</text>
+  <text x="34" y="544" class="m" font-size="7.5" fill="#5a6473">Red Team · AppSec</text>
+  <text x="34" y="556" class="m" font-size="7" fill="#3a4660">8-crate pentest · OWASP LLM</text>
+
+  <!-- LÆX #818CF8 · gates corrected [C][Q] → [C] -->
+  <rect x="277" y="490" width="247" height="72" rx="4" fill="#070c1a" stroke="rgba(129,140,248,0.45)" stroke-width="1"/>
+  <text x="291" y="508" class="m" font-size="7.5" fill="#818CF8" filter="url(#softbloom)">[C]</text>
+  <text x="291" y="526" class="s" font-size="14" fill="#dce8f5" font-weight="700">LÆX</text>
+  <text x="291" y="544" class="m" font-size="7.5" fill="#5a6473">Canon Keeper · Governance</text>
+  <text x="291" y="556" class="m" font-size="7" fill="#3a4660">XEA compliance · veto authority</text>
+
+  <!-- AYIN #FF6D00 (canonical) · clarified as observability lens on EVA-owned gates -->
+  <rect x="534" y="490" width="346" height="72" rx="4" fill="#070c1a" stroke="rgba(255,109,0,0.45)" stroke-width="1"/>
+  <text x="548" y="508" class="m" font-size="7.5" fill="#FF6D00" filter="url(#softbloom)">OBSERVABILITY LENS · [O][P]</text>
+  <text x="548" y="526" class="s" font-size="14" fill="#dce8f5" font-weight="700">AYIN</text>
+  <text x="548" y="544" class="m" font-size="7.5" fill="#5a6473">Real-Time Dashboard · HTTP :3742</text>
+  <text x="548" y="556" class="m" font-size="7" fill="#3a4660">Atomic spans · Lineage Circuit · 456 tests</text>
+</g>
+
+<!-- ── FOOTER — verified trust badges ── -->
+<g class="l6">
+  <line x1="20" y1="577" x2="880" y2="577" stroke="#172240" stroke-width="1"/>
+
+  <rect x="20" y="587" width="128" height="22" rx="3" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="0.6"/>
+  <text x="84" y="602" class="m" font-size="8" fill="#34D399" text-anchor="middle" filter="url(#softbloom)">100% self-hosted</text>
+
+  <rect x="156" y="587" width="124" height="22" rx="3" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="0.6"/>
+  <text x="218" y="602" class="m" font-size="8" fill="#34D399" text-anchor="middle" filter="url(#softbloom)">zero telemetry</text>
+
+  <rect x="288" y="587" width="150" height="22" rx="3" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="0.6"/>
+  <text x="363" y="602" class="m" font-size="8" fill="#34D399" text-anchor="middle" filter="url(#softbloom)">HMAC-SHA-256 audit</text>
+
+  <rect x="446" y="587" width="130" height="22" rx="3" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="0.6"/>
+  <text x="511" y="602" class="m" font-size="8" fill="#34D399" text-anchor="middle" filter="url(#softbloom)">air-gap capable</text>
+
+  <rect x="584" y="587" width="106" height="22" rx="3" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="0.6"/>
+  <text x="637" y="602" class="m" font-size="8" fill="#34D399" text-anchor="middle" filter="url(#softbloom)">operator-wins</text>
+
+  <text x="880" y="602" class="m" font-size="7.5" fill="#5a6473" text-anchor="end">lightarchitects.io</text>
+
+  <text x="450" y="618" class="m" font-size="7.5" fill="#5a6473" text-anchor="middle">Self-hosted · Open architecture · Your data stays yours</text>
+</g>
+
+</svg>
