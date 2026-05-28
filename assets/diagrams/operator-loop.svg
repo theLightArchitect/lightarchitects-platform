@@ -110,7 +110,7 @@
   <circle cx="760" cy="220" r="32" fill="#070c1a" stroke="#45B7D1" stroke-width="1.5" class="node-pulse"/>
   <text x="760" y="218" class="m" font-size="9" fill="#45B7D1" text-anchor="middle" letter-spacing="1.2">1 · OPERATOR</text>
   <text x="760" y="232" class="s" font-size="10" fill="#dce8f5" text-anchor="middle">submit</text>
-  <text x="850" y="155" class="m" font-size="8.5" fill="#45B7D1" letter-spacing="1" filter="url(#softbloom)">CLAUDE CODE · WEBSHELL · CLI</text>
+  <text x="850" y="155" class="m" font-size="8.5" fill="#45B7D1" letter-spacing="1">CLAUDE CODE · WEBSHELL · CLI</text>
   <text x="850" y="175" class="s" font-size="11" fill="#8a929d">A human describes the task in three ways:</text>
   <text x="850" y="192" class="s" font-size="11" fill="#8a929d">IDE for code, browser for ops, CLI for scripts.</text>
 </g>
@@ -121,7 +121,7 @@
   <circle cx="830" cy="360" r="32" fill="#070c1a" stroke="#00BFFF" stroke-width="1.5" class="node-pulse"/>
   <text x="830" y="358" class="m" font-size="9" fill="#00BFFF" text-anchor="middle" letter-spacing="1.2">2 · GATEWAY</text>
   <text x="830" y="372" class="s" font-size="10" fill="#dce8f5" text-anchor="middle">guard</text>
-  <text x="900" y="335" class="m" font-size="8.5" fill="#00BFFF" letter-spacing="1" filter="url(#softbloom)">PLATFORM CORE</text>
+  <text x="900" y="335" class="m" font-size="8.5" fill="#00BFFF" letter-spacing="1">PLATFORM CORE</text>
   <text x="900" y="355" class="s" font-size="11" fill="#8a929d">Auth, scope governance, operator-wins guarantee,</text>
   <text x="900" y="372" class="s" font-size="11" fill="#8a929d">and indirect-injection shield before anything runs.</text>
 </g>
@@ -132,7 +132,7 @@
   <circle cx="760" cy="500" r="32" fill="#070c1a" stroke="#F59E0B" stroke-width="1.5" class="node-pulse"/>
   <text x="760" y="498" class="m" font-size="9" fill="#F59E0B" text-anchor="middle" letter-spacing="1.2">3 · WAVE</text>
   <text x="760" y="512" class="s" font-size="10" fill="#dce8f5" text-anchor="middle">dispatch</text>
-  <text x="850" y="555" class="m" font-size="8.5" fill="#F59E0B" letter-spacing="1" filter="url(#softbloom)">LIGHTSQUAD ORCHESTRATOR</text>
+  <text x="850" y="555" class="m" font-size="8.5" fill="#F59E0B" letter-spacing="1">LIGHTSQUAD ORCHESTRATOR</text>
   <text x="850" y="575" class="s" font-size="11" fill="#8a929d">Up to 7 parallel workers with file-ownership</text>
   <text x="850" y="592" class="s" font-size="11" fill="#8a929d">partitioning. Three self-correction iterations.</text>
 </g>
@@ -143,7 +143,7 @@
   <circle cx="440" cy="500" r="32" fill="#070c1a" stroke="#34D399" stroke-width="1.5" class="node-pulse"/>
   <text x="440" y="498" class="m" font-size="9" fill="#34D399" text-anchor="middle" letter-spacing="1.2">4 · KNOWLEDGE</text>
   <text x="440" y="512" class="s" font-size="10" fill="#dce8f5" text-anchor="middle">retrieve</text>
-  <text x="350" y="555" class="m" font-size="8.5" fill="#34D399" letter-spacing="1" filter="url(#softbloom)" text-anchor="end">SOUL · 96.2% RECALL@5</text>
+  <text x="350" y="555" class="m" font-size="8.5" fill="#34D399" letter-spacing="1" text-anchor="end">SOUL · 96.2% RECALL@5</text>
   <text x="350" y="575" class="s" font-size="11" fill="#8a929d" text-anchor="end">Workers query the knowledge graph through</text>
   <text x="350" y="592" class="s" font-size="11" fill="#8a929d" text-anchor="end">4-signal RRF — agent identity travels with the task.</text>
 </g>
@@ -154,7 +154,7 @@
   <circle cx="370" cy="360" r="32" fill="#070c1a" stroke="#FF1493" stroke-width="1.5" class="node-pulse"/>
   <text x="370" y="358" class="m" font-size="9" fill="#FF1493" text-anchor="middle" letter-spacing="1.2">5 · MEMORY</text>
   <text x="370" y="372" class="s" font-size="10" fill="#dce8f5" text-anchor="middle">persist</text>
-  <text x="300" y="335" class="m" font-size="8.5" fill="#FF1493" letter-spacing="1" filter="url(#softbloom)" text-anchor="end">EVA · 15-STAGE HOOK PIPELINE</text>
+  <text x="300" y="335" class="m" font-size="8.5" fill="#FF1493" letter-spacing="1" text-anchor="end">EVA · 15-STAGE HOOK PIPELINE</text>
   <text x="300" y="355" class="s" font-size="11" fill="#8a929d" text-anchor="end">Every interaction is intercepted, scored for</text>
   <text x="300" y="372" class="s" font-size="11" fill="#8a929d" text-anchor="end">anomalies, and committed with tamper-evident audit.</text>
 </g>
@@ -165,7 +165,7 @@
   <circle cx="440" cy="220" r="32" fill="#070c1a" stroke="#FF6D00" stroke-width="1.5" class="node-pulse"/>
   <text x="440" y="218" class="m" font-size="9" fill="#FF6D00" text-anchor="middle" letter-spacing="1.2">6 · TRACE</text>
   <text x="440" y="232" class="s" font-size="10" fill="#dce8f5" text-anchor="middle">observe</text>
-  <text x="350" y="155" class="m" font-size="8.5" fill="#FF6D00" letter-spacing="1" filter="url(#softbloom)" text-anchor="end">AYIN · HTTP :3742</text>
+  <text x="350" y="155" class="m" font-size="8.5" fill="#FF6D00" letter-spacing="1" text-anchor="end">AYIN · HTTP :3742</text>
   <text x="350" y="175" class="s" font-size="11" fill="#8a929d" text-anchor="end">Every tool call, LLM turn, build wave, and HTTP</text>
   <text x="350" y="192" class="s" font-size="11" fill="#8a929d" text-anchor="end">request — traced end-to-end, replayable.</text>
 </g>
@@ -177,7 +177,7 @@
   <circle cx="600" cy="360" r="52" fill="none" stroke="#172240" stroke-width="0.5"/>
 
   <!-- 10 dimension tick marks around the ring -->
-  <g stroke="#dce8f5" stroke-width="1" stroke-linecap="round" filter="url(#softbloom)">
+  <g stroke="#dce8f5" stroke-width="1" stroke-linecap="round">
     <line x1="600" y1="296" x2="600" y2="308"/>
     <line x1="638" y1="304" x2="635" y2="316" transform="rotate(36 600 360)"/>
     <line x1="638" y1="304" x2="635" y2="316" transform="rotate(72 600 360)"/>
@@ -191,7 +191,7 @@
   </g>
 
   <!-- Dimension labels -->
-  <g class="m" font-size="8" fill="#dce8f5" text-anchor="middle" filter="url(#softbloom)">
+  <g class="m" font-size="8" fill="#dce8f5" text-anchor="middle">
     <text x="600" y="286">A</text>
     <text x="638" y="295">S</text>
     <text x="664" y="324">Q</text>
