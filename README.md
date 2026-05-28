@@ -1,10 +1,24 @@
 # Light Architects — Agentic Engineering Platform
 
+> **A Rust-native multi-agent AI platform that turns LLMs into reliable engineering operators** — with persistent memory, formal verification, and end-to-end observability across every tool call, build wave, and HTTP request.
+
 <p align="center">
-  <img src="assets/diagrams/architecture.svg" alt="Light Architects platform architecture" width="900">
+  <img src="assets/diagrams/thesis.svg" alt="Light Architects — the thesis" width="1100">
 </p>
 
-> **A Rust-native multi-agent AI platform that turns LLMs into reliable engineering operators** — with persistent memory, formal verification, and end-to-end observability across every tool call, build wave, and HTTP request.
+<p align="center"><sub><i>The thesis: when agents have persistent identity and provable correctness, every interaction strengthens the next.</i></sub></p>
+
+<p align="center">
+  <img src="assets/diagrams/operator-loop.svg" alt="Light Architects — the operator loop" width="1100">
+</p>
+
+<p align="center"><sub><i>The loop: every task moves through six stations. The platform earns its keep at each one.</i></sub></p>
+
+<p align="center">
+  <img src="assets/diagrams/architecture.svg" alt="Light Architects — platform architecture" width="1100">
+</p>
+
+<p align="center"><sub><i>The architecture: the production system, source-validated as of 2026-05-26.</i></sub></p>
 
 ---
 
