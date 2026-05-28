@@ -25,7 +25,7 @@ Built solo over two years in Rust, using Claude Code as the primary development 
 | Layer | Components | Purpose |
 |---|---|---|
 | **Operator** | Claude Code IDE · Webshell UI · CLI / AgentRunner | Three entry points into the platform — IDE for code, browser for ops, CLI for scripted delivery |
-| **Platform Core** | `lightarchitects-gateway` · 12-crate Rust SDK | Multi-protocol service binary (MCP stdio + HTTP). Routes between operators, agents, models, and storage behind a single auth boundary |
+| **Platform Core** | `lightarchitects-gateway` · unified Rust SDK | Multi-protocol service binary (MCP stdio + HTTP). Routes between operators, agents, models, and storage behind a single auth boundary |
 | **Domain Agents** | CORSO · EVA · SOUL · QUANTUM · SERAPH · LÆX | Six specialized MCP servers spawned on-demand. Each owns a domain (security, devops, knowledge, research, red-team, canon) with its own strand vocabulary |
 | **Wave Engine** | LightSquad orchestrator | Up to 7 parallel workers with file-ownership partitioning. Three self-correction iterations. 10-dimension merge gate (A·S·Q·C·O·P·K·D·T·R) |
 | **Model Router** | 4 supervisor variants · 7+ providers | Claude · Codex · Ollama Cloud · OpenAI-compatible · OpenRouter · LiteLLM · Azure. Per-task selection based on capability, cost, and latency |
@@ -39,7 +39,7 @@ Built solo over two years in Rust, using Claude Code as the primary development 
 - **96.2% Recall@5** on LongMemEval (industry benchmark, 500 questions, 23,854 steps)
 - **247,000+ conversation turns** processed in production
 - **6 production MCP servers** running continuously
-- **2 years** of solo engineering, ~12 crates of Rust
+- **2 years** of solo engineering across the unified SDK + sibling MCP servers
 - **Lean 4 / Mathlib formal proofs** of retrieval invariants, RRF positivity, and parallel-execution safety
 - **Zero data loss** since deployment — durable span persistence at every interaction boundary
 - **Constitutional AI alignment** — operator-wins guarantee with HMAC-audited supersedure
@@ -48,28 +48,32 @@ Built solo over two years in Rust, using Claude Code as the primary development 
 
 ## Public repositories
 
-The platform's foundational components are open source and available for inspection at [github.com/theLightArchitect](https://github.com/theLightArchitect):
+The platform's foundational components are open source and available for inspection at [github.com/theLightArchitect](https://github.com/theLightArchitect). The licensing posture is **AGPL-3.0** for differentiated platform components (with commercial licensing available), and permissive licenses for utility libraries:
 
-| Component | Repository | What it is |
-|---|---|---|
-| Unified SDK | [`lightarchitects-sdk`](https://github.com/theLightArchitect/lightarchitects-sdk) | 12-crate Rust workspace — gateway, webshell, helix store, training arena, oracle, AYIN client |
-| Knowledge graph | [`lightarchitects-soul`](https://github.com/theLightArchitect/lightarchitects-soul) | SOUL primitives, retrieval engine, helix proofs |
-| Security orchestration | [`CORSO`](https://github.com/theLightArchitect/CORSO) | MCP-spec security scanner, 25 tool actions, pre-commit gate |
-| Consciousness & memory | [`EVA`](https://github.com/theLightArchitect/EVA) | 15-stage hook pipeline, HMAC audit, anomaly detection |
-| Forensic investigation | [`QUANTUM`](https://github.com/theLightArchitect/QUANTUM) | Evidence-chain construction, Reflexion self-critique, hypothesis testing |
-| Cryptographic primitives | [`la-crypto`](https://github.com/theLightArchitect/la-crypto) | HKDF · HMAC · AES-256-GCM · Ed25519 — scripture-forged domain separation |
-| API key service | [`larc-api-keys`](https://github.com/theLightArchitect/larc-api-keys) | Axum + SQLite + JWT — three-tier auth |
-| CLI & worker runtime | [`lightarchitects-cli`](https://github.com/theLightArchitect/lightarchitects-cli) | LASDLC state machine, per-task isolation, worker orchestration |
+| Component | Repository | License | What it is |
+|---|---|---|---|
+| Unified SDK | [`lightarchitects-sdk`](https://github.com/theLightArchitect/lightarchitects-sdk) | MPL-2.0 | Rust SDK with typed clients for the MCP sibling ecosystem — observability, crypto, auth, helix store, training arena, multi-model oracle |
+| Knowledge-graph templates | [`lightarchitects-soul`](https://github.com/theLightArchitect/lightarchitects-soul) | — | Security & repository conventions: 4-layer vault protection, pre-commit/pre-push hooks |
+| Security orchestration | [`CORSO`](https://github.com/theLightArchitect/CORSO) | AGPL-3.0 | MCP-spec security scanner, 25 tool actions, pre-commit gate |
+| Consciousness & memory | [`EVA`](https://github.com/theLightArchitect/EVA) | AGPL-3.0 | 15-stage hook pipeline, HMAC audit, anomaly detection |
+| Knowledge graph | [`SOUL`](https://github.com/theLightArchitect/SOUL) | AGPL-3.0 | 4-signal RRF retrieval, Neo4j backend, helix primitives |
+| Forensic investigation | [`QUANTUM`](https://github.com/theLightArchitect/QUANTUM) | AGPL-3.0 | Evidence-chain construction, Reflexion self-critique, hypothesis testing |
+| Pentest framework (architecture) | [`SERAPH`](https://github.com/theLightArchitect/SERAPH) | AGPL-3.0 | Architecture & ScopeGovernor design for authorized security testing — **docs-only**, source kept private (see below) |
+| Observability | [`AYIN`](https://github.com/theLightArchitect/AYIN) | Apache-2.0 | 4-crate Rust workspace — real-time span tracing with privacy filter, HTTP dashboard on `:3742`, 456 tests |
+| Cryptographic primitives | [`la-crypto`](https://github.com/theLightArchitect/la-crypto) | Apache-2.0 | HKDF · HMAC · AES-256-GCM · Ed25519 — domain-separated key derivation |
+| API key service | [`la-keys`](https://github.com/theLightArchitect/la-keys) | Apache-2.0 | Axum + SQLite + JWT — three-tier auth, webhook event notifications |
 
 ## Internal components & roadmap
 
-Three platform components are not currently open source. Each has a specific reason — and where applicable, a path to release. Future open-source repositories follow the platform naming convention: `lightarchitects-` for major components, `la-` for focused libraries.
+Several platform components remain internal. Each has a specific reason — and where applicable, a path to public release.
 
-| Component | Status | Reason | Future repo |
-|---|---|---|---|
-| **SERAPH** | Internal — permanent | Offensive security automation. Capability-misuse risk outweighs open-source value. | Stays internal indefinitely. Architecture and methodology can be discussed under engagement. |
-| **AYIN** | Internal — release candidate | Observability layer for MCP-spec platforms. Generic enough for broad use. | Targeting [`lightarchitects-ayin`](https://github.com/theLightArchitect/lightarchitects-ayin) public release `2026-Q3` once API surface stabilizes. |
-| **LÆX** | Internal — design phase | Canon-keeper agent enforcing engineering standards. Currently domain-specific to Light Architects canon. | Targeting [`lightarchitects-laex`](https://github.com/theLightArchitect/lightarchitects-laex) public release `2026-Q4` once the canon abstraction is generalized. |
+| Component | Status | Reason |
+|---|---|---|
+| **SERAPH source code** | Internal — permanent | Real offensive-security tooling (SSH credential handling, exploitation primitives). Capability-misuse risk outweighs open-source value. The public [`SERAPH`](https://github.com/theLightArchitect/SERAPH) repo carries the architecture and ScopeGovernor design; the implementation stays private. |
+| **lightarchitects-cli (AgentRunner)** | Internal — permanent | Tightly coupled to private internal crates and proprietary delivery patterns. Open-sourcing would require open-sourcing the entire internal platform simultaneously. |
+| **LÆX** (canon keeper) | Internal — design phase | Currently domain-specific to Light Architects engineering canon. May be open-sourced as a generalized "standards-as-code" tool once the canon abstraction is decoupled. |
+| **lightarchitects-next** | Internal — permanent | Customer-facing marketing surface with auth + billing integration. Not a research artifact. |
+| Training corpora & fine-tuning data | Internal — permanent | Curated training data, evaluation sets, and RunPod fine-tuning workflows. |
 
 ### Planned standalone library extractions
 
@@ -77,8 +81,8 @@ Two components currently embedded in `lightarchitects-sdk` are candidates for st
 
 | Component | Future repo | Status | What it is |
 |---|---|---|---|
-| Lean 4 / Mathlib retrieval invariants | [`la-lean`](https://github.com/theLightArchitect/la-lean) | Ready to extract | Machine-checkable proofs that the 4-signal RRF retrieval invariants hold under structural refactor. Useful as a reference implementation for any retrieval system that wants compile-time correctness guarantees. |
-| MCP tool-use training arena | [`la-arena`](https://github.com/theLightArchitect/la-arena) | **Pending test coverage** — not yet release-ready | Training data factory for LLM tool use. Auto-discovers MCP schemas, generates 7 exercise types × 3 difficulty levels, 8-dimensional reward scoring, SFT/DPO/GRPO export for Unsloth GRPOTrainer, TRL, axolotl. **Will be released once integration-test coverage and adversarial-input robustness have been validated** — engineering rigor over release pressure. |
+| Lean 4 / Mathlib retrieval invariants | `la-lean` | Extraction queued | Machine-checkable proofs that the 4-signal RRF retrieval invariants hold under structural refactor. Useful as a reference implementation for any retrieval system that wants compile-time correctness guarantees. |
+| MCP tool-use training arena | `la-arena` | **Pending test coverage** — not yet release-ready | Training data factory for LLM tool use. Auto-discovers MCP schemas, generates 7 exercise types × 3 difficulty levels, 8-dimensional reward scoring, SFT/DPO/GRPO export for Unsloth GRPOTrainer, TRL, axolotl. **Will be released once integration-test coverage and adversarial-input robustness have been validated** — engineering rigor over release pressure. |
 
 ---
 
